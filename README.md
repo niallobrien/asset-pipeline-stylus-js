@@ -2,10 +2,25 @@
 
 A base set of stylus files to get started in node projects.
 
-Many files still need organising / moving. Useful as a reference for now, but things *will* change.
+## Installation
 
----
+```
+// clone the repo
+git clone https://github.com/niallobrien/stylus-boilerplate.git
 
-## Dependencies
+// change into the repo directory
+cd stylus-boilerplate
 
-This repository relies on [Autoprefixer Stylus](https://github.com/jenius/autoprefixer-stylus/), [Stylus Mixins](https://github.com/jackbrewer/stylus-mixins) and [Responsive Grid](https://github.com/clocklimitem/responsive-grid) being available in the project.
+// install dependencies
+npm install
+```
+
+## Usage
+```
+// production
+npm start
+
+// development
+npm run dev
+```
+Production will minify your assets. Development will output sourcemaps.

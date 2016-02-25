@@ -1,19 +1,14 @@
 {
-  "name": "hackathon-starter",
-  "version": "3.4.1",
+  "name": "stylus-boilerplate",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/niallobrien/stylus-boilerplate.git"
   },
   "scripts": {
-    "start": "node app.js",
-    "dev": "webpack --progress --colors --watch",
+    "start": "rm -rf public/**/**/*.map && webpack --config webpack.production.config.js --progress --colors -p",
+    "dev": "webpack --progress --colors --watch -d",
     "test": "mocha --reporter spec --timeout 5000"
-  },
-  "dependencies": {
-    "autoprefixer-stylus": "^0.9.1",
-    "dotenv": "^2.0.0",
-    "jade": "^1.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.2",
@@ -24,6 +19,7 @@
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.9.0",
     "mocha": "^2.4.5",
     "multiline": "^1.0.2",
     "postcss-loader": "^0.8.0",
@@ -33,8 +29,7 @@
     "stylus-loader": "^1.5.1",
     "stylus-mixins": "^0.2.1",
     "supertest": "^1.1.0",
-    "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "^1.12.13"
   },
   "license": "MIT"
 }

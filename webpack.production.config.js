@@ -14,13 +14,14 @@ var config = {
   entry: mainPath,
   output: {
     path: buildPath,
+    pathinfo: false,
     filename: '[name].js',
     publicPath: '/assets/scripts/'
   },
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel', exclude: [nodeModulesPath] },
-      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!stylus-loader') },      
+      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize!postcss-loader!stylus-loader') },      
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader') }
     ]
   },
