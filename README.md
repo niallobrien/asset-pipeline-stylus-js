@@ -23,5 +23,7 @@ npm start
 // development
 npm run dev
 ```
+All assets are output to `/public/assets`.
+
 Production will minify your assets.
 Development outputs sourcemaps, will run Browsersync and assumes you have a server running on port 3000. See `webpack.config.js`, lines 33-43 to configure or remove if Browsersync support is not required.

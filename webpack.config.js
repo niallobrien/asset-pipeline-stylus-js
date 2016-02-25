@@ -20,13 +20,13 @@ var config = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel', exclude: [nodeModulesPath] },
+      { test: /\.js$/, loader: 'babel', exclude: nodeModulesPath },
       { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!stylus-loader') },      
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader') }
     ]
   },
   postcss: function () {
-    return [ autoprefixer({ browsers: ['last 4 versions'] }) ];
+    return [ autoprefixer({ browsers: 'last 4 versions' }) ];
   },
   plugins: [
     new ExtractTextPlugin("../styles/[name].css"),
