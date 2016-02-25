@@ -1,4 +1,4 @@
-var Webpack = require('webpack');
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var path = require('path');
@@ -29,7 +29,15 @@ var config = {
     return [ autoprefixer({ browsers: ['last 4 versions'] }) ];
   },
   plugins: [
-    new ExtractTextPlugin("../styles/[name].css")
+    new ExtractTextPlugin("../styles/[name].css"),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    })
+
   ]
 };
 

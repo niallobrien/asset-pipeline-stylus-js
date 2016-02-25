@@ -1,6 +1,6 @@
-# Stylus Boilerplate
+# Asset Pipeline
 
-A base set of stylus files to get started in node projects.
+A Stylus, Javascript & Webpack based asset pipeline.
 
 ## Installation
 
@@ -23,4 +23,5 @@ npm start
 // development
 npm run dev
 ```
-Production will minify your assets. Development will output sourcemaps.
+Production will minify your assets.
+Development outputs sourcemaps, will run Browsersync and assumes you have a server running on port 3000. See `webpack.config.js`, lines 33-43 to configure or remove if Browsersync support is not required.
